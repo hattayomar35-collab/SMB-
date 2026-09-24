@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10100f" />
+  <link rel="icon" href="data:," />
+  <title>SMB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header" id="header">
+    <button class="icon-btn mobile-menu" id="menuToggle" aria-label="Open menu"><span class="hamb"><i></i><i></i></span></button>
+    <nav class="primary-nav"><a href="#collections">Collections</a><a href="#jewelry">Jewelry</a><a href="#watches">Watches</a></nav>
+    <a class="wordmark" href="#home" aria-label="SMB home">SMB</a>
+    <div class="header-actions"><button class="icon-btn search-open" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 5 5"/></svg></button><a href="#appointments" class="account-link">Appointment</a><a href="#wishlist" class="icon-btn heart-link" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.4 8.7c0 5.2-8.4 10.3-8.4 10.3S3.6 13.9 3.6 8.7A4.3 4.3 0 0 1 12 6.9a4.3 4.3 0 0 1 8.4 1.8Z"/></svg><span class="count" id="wishCount">0</span></a><a href="#bag" class="icon-btn bag-link" aria-label="Shopping bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="count" id="bagCount">0</span></a><select class="language" id="language" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select></div>
+  </header>
+  <div class="mobile-drawer" id="mobileDrawer"><button class="drawer-close" aria-label="Close menu">×</button><a href="#collections">Collections</a><a href="#jewelry">Jewelry</a><a href="#watches">Watches</a><a href="#editorial">Editorial</a><a href="#bespoke">Bespoke</a><a href="#appointments">Appointments</a></div>
+  <main id="app"></main>
+  <footer class="site-footer" id="footer">
+    <div class="footer-top"><a class="wordmark footer-mark" href="#home">SMB</a><div class="newsletter"><p>PRIVATE ACCESS &amp; NEW COLLECTIONS</p><form id="newsletterForm"><input type="email" placeholder="Your email address" aria-label="Email address" required><button aria-label="Subscribe">↗</button></form><small id="newsletterNote"></small></div></div>
+    <div class="footer-links"><div><h4>SHOP</h4><a href="#jewelry">Jewelry</a><a href="#watches">Watches</a><a href="#collections">Collections</a><a href="#gifts">Gifts</a></div><div><h4>ABOUT</h4><a href="#story">Our Story</a><a href="#craftsmanship">Craftsmanship</a><a href="#editorial">Editorial</a><a href="#bespoke">Bespoke</a></div><div><h4>SERVICES</h4><a href="#appointments">Appointments</a><a href="#services">Jewelry Care</a><a href="#services">Watch Care</a><a href="#services">Contact</a></div><div><h4>INFORMATION</h4><a href="#services">Privacy</a><a href="#services">Terms</a><a href="#services">Shipping</a><a href="#services">Returns</a></div></div>
+    <div class="footer-bottom"><span>© SMB 2026</span><span>Made to be cherished.</span><div class="footer-langs"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="ar">AR</button></div></div>
+  </footer>
+  <div class="search-panel" id="searchPanel"><div class="search-inner"><button class="search-close" aria-label="Close search">×</button><label for="searchInput">SEARCH SMB</label><input id="searchInput" type="search" placeholder="Search collections, jewelry, watches…"><div id="searchResults" class="search-results"></div></div></div>
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-content"></div><button class="modal-close" aria-label="Close">×</button></div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
