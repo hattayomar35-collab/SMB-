@@ -1,4 +1,6 @@
-const A = 'uploads/';
+// Resolve media beside this module so assets stay inside the deployed project
+// directory (for example, /SMB-/ on GitHub Pages).
+const A = new URL('./', import.meta.url).href;
 const products = [
   {id:'celeste-bracelet',name:'Celeste Diamond Bracelet',category:'Bracelets',collection:'Diamond Collection',type:'jewelry',images:['grok_image_1772626989606.jpg'],material:'Gold and diamond details'},
   {id:'heritage-bangle',name:'Heritage Diamond Bangle',category:'Bracelets',collection:'Royal Collection',type:'jewelry',images:['grok_image_1772626937470.jpg','grok_image_1772626982011.jpg'],material:'Gold and diamond details'},
